@@ -5,11 +5,11 @@ import { useSession, signIn, signOut } from "next-auth/react";
 export default function Home() {
   const { data: session, status } = useSession();
 
+  if (status === "loading") return <p>Cargando sesión...</p>;
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-      {status === "loading" ? (
-        <p>Cargando sesión...</p>
-      ) : session ? (
+      {session ? (
         <>
           <p className="mb-4 text-lg">¡Hola, {session.user?.name}!</p>
           <button
