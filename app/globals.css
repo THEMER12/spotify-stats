@@ -4,7 +4,7 @@
 :root {
   --black: #000000ff;
   --oxford-blue: #14213dff;
-  --orange-web: #fca311ff;
+  --orange-web: #fca311;
   --platinum: #e5e5e5ff;
   --white: #ffffffff;
 }
@@ -15,3 +15,13 @@ body {
   color: var(--platinum);
   background-color: var(--black);
 }
+
+::-webkit-scrollbar {
+  width: 10px; 
+  height: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orange-web); 
+}
+

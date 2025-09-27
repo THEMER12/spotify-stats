@@ -2,7 +2,7 @@ import "./globals.css";
 import ClientSessionProvider from "./ClientSessionProvider";
 
 export const metadata = {
-  title: "Spotify Stats",
+  title: "Tracklytics™",
   description: "App con login de Spotify",
 };
 
