@@ -1,4 +1,5 @@
 "use client";
+import { signIn } from "next-auth/react";
 
 export default function Section2() {
   return (
@@ -18,14 +19,15 @@ export default function Section2() {
 
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="relative z-10 text-left pl-6 sm:pl-10 md:pl-20 lg:pl-32 max-w-md sm:max-w-lg md:max-w-xl">
+      <div className="relative z-10 text-left pl-6 sm:pl-10 md:pl-20 lg:pl-32 max-w-md sm:max-w-lg md:max-w-4xl">
         <h2 className="text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold uppercase mb-6 leading-snug sm:leading-tight md:leading-snug">
-          Unlock your music with{" "}
-          <span className="text-[var(--orange-web)]">Tracklytics™</span>. <br />
-          See your stats. Own your sound.
+          Unlock your music with<span className="text-[var(--orange-web)]"> <i>Tracklytics</i>™</span>. <br />
+          See your stats. <br /> Own your sound.
         </h2>
 
-        <button className="px-6 py-3 sm:px-8 sm:py-4 bg-[var(--orange-web)] text-black rounded-xl text-lg sm:text-xl font-semibold uppercase hover:bg-orange-500 transition">
+        <button 
+        onClick={() => signIn("spotify")}
+        className="px-6 py-3 sm:px-8 sm:py-4 bg-[var(--orange-web)] text-black rounded-xl text-lg sm:text-xl font-semibold uppercase hover:bg-orange-500 transition">
           Connect with Spotify
         </button>
       </div>
