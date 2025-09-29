@@ -26,7 +26,7 @@ export default function Section2() {
         </h2>
 
         <button 
-        onClick={() => signIn("spotify")}
+        onClick={() => signIn("spotify", { callbackUrl: "/profile" })}
         className="px-6 py-3 sm:px-8 sm:py-4 bg-[var(--orange-web)] text-black rounded-xl text-lg sm:text-xl font-semibold uppercase hover:bg-orange-500 transition">
           Connect with Spotify
         </button>
